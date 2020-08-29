@@ -373,5 +373,6 @@ void xIX03::writeBlock(uint8_t reg, uint8_t *val, uint8_t len)
     {
         Wire.write(val[i]);
     }
+    delay(50);
     Wire.endTransmission();
 }
