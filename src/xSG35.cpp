@@ -1,7 +1,7 @@
 #include "Arduino.h"
 #include "xSG35.h"
 
-xSG35::PMS()
+xSG35::xSG35()
 {
   //this->_stream = &stream;
 }
