@@ -4,7 +4,7 @@
 #include <Wire.h>
 #include <inttypes.h>
 
-#ifdef ESP32 | ESP8266
+#if defined(ESP32) || defined(ESP8266)
 #include <stdlib_noniso.h>
 #else
 #include <avr/dtostrf.h>

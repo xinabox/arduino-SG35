@@ -167,27 +167,27 @@ void xIX03::println(void)
         writeBlock(SC16IS740_THR, (uint8_t *)newline, 1);
 }
 
-void xIX03::println(const String &s)
-{
-    String _s = s + "\r\n";
-    uint8_t i = strlen(_s.c_str());
-    char final[i] = {NULL};
-    const char *conv = _s.c_str();
-    strcat(final, conv);
-    if (readLSR())
-        writeBlock(SC16IS740_THR, (uint8_t *)conv, sizeof(final));
-}
+// void xIX03::println(const String &s)
+// {
+//     String _s = s + "\r\n";
+//     uint8_t i = strlen(_s.c_str());
+//     char final[i] = {\0};
+//     const char *conv = _s.c_str();
+//     strcat(final, conv);
+//     if (readLSR())
+//         writeBlock(SC16IS740_THR, (uint8_t *)conv, sizeof(final));
+// }
 
-void xIX03::println(const char c[])
-{
-    String _s = String(c) + "\r\n";
-    uint8_t i = strlen(_s.c_str());
-    char final[i] = {NULL};
-    const char *conv = _s.c_str();
-    strcat(final, conv);
-    if (readLSR())
-        writeBlock(SC16IS740_THR, (uint8_t *)conv, sizeof(final));
-}
+// void xIX03::println(const char c[])
+// {
+//     String _s = String(c) + "\r\n";
+//     uint8_t i = strlen(_s.c_str());
+//     char final[i] = {\0};
+//     const char *conv = _s.c_str();
+//     strcat(final, conv);
+//     if (readLSR())
+//         writeBlock(SC16IS740_THR, (uint8_t *)conv, sizeof(final));
+// }
 
 void xIX03::println(char c)
 {
